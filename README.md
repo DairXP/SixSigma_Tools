@@ -11,8 +11,8 @@ Aplicación web para implementación de herramientas Lean Six Sigma, incluyendo 
 
 1. Clonar el repositorio:
    ```bash
-   git clone <url-del-repositorio>
-   cd six-sigma-tools
+   git clone https://github.com/DairXP/SixSigma_Tools
+   cd SixSigma_Tools
    ```
 
 2. Instalar dependencias:
