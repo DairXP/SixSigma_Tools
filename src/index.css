@@ -1,0 +1,70 @@
+/* Importar estilos base */
+@import './styles/base.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    @apply bg-secondary-50 text-secondary-900;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  #root {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1 {
+    @apply text-3xl font-bold text-secondary-900;
+  }
+
+  h2 {
+    @apply text-2xl font-semibold text-secondary-900;
+  }
+
+  h3 {
+    @apply text-xl font-semibold text-secondary-900;
+  }
+
+  h4 {
+    @apply text-lg font-medium text-secondary-900;
+  }
+
+  a {
+    @apply text-primary-600 hover:text-primary-700;
+  }
+
+  p {
+    @apply text-secondary-600 leading-relaxed;
+  }
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+}

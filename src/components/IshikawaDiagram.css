@@ -1,0 +1,371 @@
+/* Rotaciones para las líneas diagonales */
+.-rotate-30 {
+  transform: rotate(-30deg);
+}
+
+.rotate-30 {
+  transform: rotate(30deg);
+}
+
+/* Ajustes para el contenido en las líneas diagonales */
+.cause-container {
+  transform: rotate(0deg);
+}
+
+/* Animaciones */
+.cause-item {
+  transition: all 0.3s ease;
+}
+
+.cause-item:hover {
+  transform: scale(1.02);
+}
+
+/* Líneas de conexión */
+.connection-line {
+  position: absolute;
+  height: 1px;
+  background-color: currentColor;
+  transition: all 0.3s ease;
+}
+
+/* Forma de pescado */
+.ishikawa-container {
+  width: 100%;
+  min-height: 600px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: auto;
+}
+
+.fish-diagram {
+  position: relative;
+  width: 100%;
+  min-width: fit-content;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+}
+
+/* Línea central */
+.fish-spine {
+  position: absolute;
+  left: 100px;
+  right: 200px;
+  height: 4px;
+  background: #0066ff;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Efecto/Problema */
+.fish-head {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 180px;
+  z-index: 2;
+}
+
+.effect-box {
+  background: white;
+  border: 2px solid #0066ff;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  font-weight: 500;
+  color: #0066ff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.effect-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e40af;
+}
+
+/* Contenedor de causas */
+.causes-container {
+  position: relative;
+  width: calc(100% - 220px);
+  margin-right: 200px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Grupo de causas */
+.cause-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(33.33% - 20px);
+  min-width: 200px;
+}
+
+.cause-group:nth-child(n+4) {
+  margin-top: 40px;
+}
+
+/* Línea vertical de conexión */
+.cause-line {
+  position: absolute;
+  width: 2px;
+  background: #0066ff;
+  left: 50%;
+  height: 40px;
+}
+
+.cause-group:nth-child(-n+3) .cause-line {
+  top: 100%;
+}
+
+.cause-group:nth-child(n+4) .cause-line {
+  bottom: 100%;
+}
+
+/* Causa principal */
+.cause-main {
+  width: 100%;
+  background: #0066ff;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Subcausas */
+.subcauses-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 5px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.subcause {
+  background-color: white;
+  color: #1e3a8a;
+  padding: 10px;
+  margin: 6px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.subcause:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Botones de acción */
+.action-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.btn-add,
+.btn-delete {
+  padding: 4px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.btn-add {
+  background-color: #22c55e;
+  color: white;
+}
+
+.btn-delete {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  margin-left: 4px;
+}
+
+.btn-add-subcause {
+  background-color: #22c55e;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 6px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.btn-add-subcause:hover {
+  background-color: #16a34a;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-delete-subcause {
+  background-color: transparent;
+  color: #ef4444;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  margin-left: 6px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+.btn-delete-subcause:hover {
+  color: #dc2626;
+  transform: scale(1.1);
+}
+
+.btn-add-ishikawa {
+  background-color: #22c55e !important;
+  transition: all 0.2s !important;
+}
+
+.btn-add-ishikawa:hover {
+  background-color: #16a34a !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Formulario de entrada */
+.input-form {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.input-field {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+/* Tema oscuro */
+.dark .ishikawa-container {
+  background: #1f2937;
+}
+
+.dark .effect-box {
+  background: #374151;
+  border-color: #3b82f6;
+  color: #93c5fd;
+}
+
+.dark .cause-main {
+  background: #3b82f6;
+}
+
+.dark .subcause {
+  background: #374151;
+  border-color: #4b5563;
+  color: #e5e7eb;
+}
+
+.dark .subcause:hover {
+  background: #4b5563;
+}
+
+.dark .input-form {
+  background: #374151;
+  border-color: #4b5563;
+}
+
+.dark .input-field {
+  background: #1f2937;
+  border-color: #4b5563;
+  color: #e5e7eb;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .cause-group {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .ishikawa-container {
+    padding: 10px;
+  }
+
+  .fish-diagram {
+    padding: 20px;
+  }
+
+  .cause-group {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .cause-group:nth-child(n+4) {
+    margin-top: 10px;
+  }
+
+  .causes-container {
+    flex-direction: column;
+    margin-right: 100px;
+  }
+
+  .fish-head {
+    width: 120px;
+  }
+
+  .effect-box {
+    font-size: 0.9em;
+    padding: 10px;
+  }
+}
+
+/* Animaciones */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cause-main,
+.subcause,
+.input-form {
+  animation: slideIn 0.3s ease-out;
+}

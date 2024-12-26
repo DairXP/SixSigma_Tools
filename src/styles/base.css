@@ -1,0 +1,203 @@
+/* Base styles for Six Sigma Tools */
+
+/* Buttons */
+.btn {
+  @apply px-4 py-2 rounded-lg font-medium transition-all duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2;
+}
+
+.btn-primary {
+  @apply bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500;
+}
+
+.btn-secondary {
+  @apply bg-secondary-100 text-secondary-700 hover:bg-secondary-200 focus:ring-secondary-500;
+}
+
+.btn-success {
+  @apply bg-success-600 text-white hover:bg-success-700 focus:ring-success-500;
+}
+
+/* Cards */
+.card {
+  @apply bg-white rounded-xl shadow-soft p-6;
+}
+
+.card-hover {
+  @apply transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg;
+}
+
+/* Forms */
+.form-input {
+  @apply block w-full rounded-lg border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500;
+}
+
+.form-label {
+  @apply block text-sm font-medium text-secondary-700 mb-1;
+}
+
+.form-select {
+  @apply block w-full rounded-lg border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500;
+}
+
+/* Tables */
+.table-container {
+  @apply overflow-x-auto rounded-lg border border-gray-200;
+}
+
+.table {
+  @apply min-w-full divide-y divide-gray-200;
+}
+
+.table thead {
+  @apply bg-secondary-50;
+}
+
+.table th {
+  @apply px-6 py-3 text-left text-xs font-medium text-secondary-500 uppercase tracking-wider;
+}
+
+.table td {
+  @apply px-6 py-4 whitespace-nowrap text-sm text-secondary-900;
+}
+
+.table tbody tr {
+  @apply hover:bg-secondary-50 transition-colors duration-150 ease-in-out;
+}
+
+/* Badges */
+.badge {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+}
+
+.badge-primary {
+  @apply bg-primary-100 text-primary-800;
+}
+
+.badge-success {
+  @apply bg-success-100 text-success-800;
+}
+
+.badge-warning {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.badge-error {
+  @apply bg-red-100 text-red-800;
+}
+
+/* Animations */
+.fade-in {
+  @apply transition-opacity duration-300;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Custom scrollbar */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: theme('colors.secondary.300') theme('colors.secondary.100');
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  @apply w-2;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  @apply bg-secondary-100;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-secondary-300 rounded-full hover:bg-secondary-400;
+}
+
+/* Charts and graphs */
+.chart-container {
+  @apply bg-white p-4 rounded-xl shadow-soft;
+}
+
+/* Loading states */
+.loading-skeleton {
+  @apply animate-pulse bg-secondary-100 rounded;
+}
+
+/* Tooltips */
+.tooltip {
+  @apply invisible absolute;
+}
+
+.has-tooltip:hover .tooltip {
+  @apply visible z-50;
+}
+
+/* Grid layouts */
+.grid-dashboard {
+  @apply grid gap-6 md:grid-cols-2 lg:grid-cols-3;
+}
+
+/* Stats */
+.stat-card {
+  @apply p-6 bg-white rounded-xl shadow-soft space-y-2;
+}
+
+.stat-title {
+  @apply text-sm font-medium text-secondary-500;
+}
+
+.stat-value {
+  @apply text-3xl font-semibold text-secondary-900;
+}
+
+.stat-desc {
+  @apply text-sm text-secondary-600;
+}
+
+/* Navigation */
+.nav-link {
+  @apply flex items-center px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-150 ease-in-out;
+}
+
+.nav-link-active {
+  @apply bg-primary-50 text-primary-600;
+}
+
+.nav-link-inactive {
+  @apply text-secondary-600 hover:bg-secondary-50 hover:text-secondary-900;
+}
+
+/* Modals */
+.modal-backdrop {
+  @apply fixed inset-0 bg-secondary-900/50 backdrop-blur-sm;
+}
+
+.modal-content {
+  @apply relative bg-white rounded-xl shadow-xl max-w-lg w-full mx-auto mt-16 p-6;
+}
+
+/* Alerts */
+.alert {
+  @apply p-4 rounded-lg border;
+}
+
+.alert-info {
+  @apply bg-blue-50 border-blue-200 text-blue-800;
+}
+
+.alert-success {
+  @apply bg-success-50 border-success-200 text-success-800;
+}
+
+.alert-warning {
+  @apply bg-yellow-50 border-yellow-200 text-yellow-800;
+}
+
+.alert-error {
+  @apply bg-red-50 border-red-200 text-red-800;
+}
